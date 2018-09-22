@@ -1,1 +1,1 @@
-"# elm-sudoku-solver" 
+# elm-sudoku-solver
