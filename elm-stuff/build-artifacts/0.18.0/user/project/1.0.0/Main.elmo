@@ -1,0 +1,473 @@
+var _user$project$Main$placeHolder = function (i) {
+	var item = _elm_lang$core$Native_Utils.eq(i, 0) ? '' : _elm_lang$core$Basics$toString(i);
+	return A2(
+		_elm_lang$html$Html$div,
+		{
+			ctor: '::',
+			_0: _elm_lang$html$Html_Attributes$class('place-holder grid-color'),
+			_1: {
+				ctor: '::',
+				_0: _elm_lang$html$Html_Attributes$id(item),
+				_1: {ctor: '[]'}
+			}
+		},
+		{
+			ctor: '::',
+			_0: _elm_lang$html$Html$text(item),
+			_1: {ctor: '[]'}
+		});
+};
+var _user$project$Main$row = function (arr) {
+	return A2(
+		_elm_lang$html$Html$div,
+		{
+			ctor: '::',
+			_0: _elm_lang$html$Html_Attributes$class('row'),
+			_1: {ctor: '[]'}
+		},
+		A2(
+			_elm_lang$core$List$map,
+			function (i) {
+				return _user$project$Main$placeHolder(i);
+			},
+			arr));
+};
+var _user$project$Main$viewRow = function (boardRow) {
+	return _user$project$Main$row(boardRow);
+};
+var _user$project$Main$viewHeader = A2(
+	_elm_lang$html$Html$div,
+	{ctor: '[]'},
+	{
+		ctor: '::',
+		_0: A2(
+			_elm_lang$html$Html$h1,
+			{ctor: '[]'},
+			{
+				ctor: '::',
+				_0: _elm_lang$html$Html$text('Sudoku Solver'),
+				_1: {ctor: '[]'}
+			}),
+		_1: {ctor: '[]'}
+	});
+var _user$project$Main$stylesheet = function () {
+	var children = {ctor: '[]'};
+	var attrs = {
+		ctor: '::',
+		_0: A2(_elm_lang$html$Html_Attributes$attribute, 'Rel', 'stylesheet'),
+		_1: {
+			ctor: '::',
+			_0: A2(_elm_lang$html$Html_Attributes$attribute, 'property', 'stylesheet'),
+			_1: {
+				ctor: '::',
+				_0: A2(_elm_lang$html$Html_Attributes$attribute, 'href', 'main.css'),
+				_1: {ctor: '[]'}
+			}
+		}
+	};
+	var tag = 'link';
+	return A3(_elm_lang$html$Html$node, tag, attrs, children);
+}();
+var _user$project$Main$view = function (model) {
+	return A2(
+		_elm_lang$html$Html$div,
+		{ctor: '[]'},
+		{
+			ctor: '::',
+			_0: _user$project$Main$stylesheet,
+			_1: {
+				ctor: '::',
+				_0: _user$project$Main$viewHeader,
+				_1: {
+					ctor: '::',
+					_0: A2(
+						_elm_lang$html$Html$div,
+						{
+							ctor: '::',
+							_0: _elm_lang$html$Html_Attributes$class('marker-board'),
+							_1: {ctor: '[]'}
+						},
+						A2(
+							_elm_lang$core$List$map,
+							function (row) {
+								return _user$project$Main$viewRow(row);
+							},
+							model.board)),
+					_1: {ctor: '[]'}
+				}
+			}
+		});
+};
+var _user$project$Main$update = F2(
+	function (msg, model) {
+		return model;
+	});
+var _user$project$Main$model = {
+	board: {
+		ctor: '::',
+		_0: {
+			ctor: '::',
+			_0: 0,
+			_1: {
+				ctor: '::',
+				_0: 0,
+				_1: {
+					ctor: '::',
+					_0: 5,
+					_1: {
+						ctor: '::',
+						_0: 0,
+						_1: {
+							ctor: '::',
+							_0: 0,
+							_1: {
+								ctor: '::',
+								_0: 6,
+								_1: {
+									ctor: '::',
+									_0: 3,
+									_1: {
+										ctor: '::',
+										_0: 0,
+										_1: {
+											ctor: '::',
+											_0: 0,
+											_1: {ctor: '[]'}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		},
+		_1: {
+			ctor: '::',
+			_0: {
+				ctor: '::',
+				_0: 0,
+				_1: {
+					ctor: '::',
+					_0: 0,
+					_1: {
+						ctor: '::',
+						_0: 0,
+						_1: {
+							ctor: '::',
+							_0: 0,
+							_1: {
+								ctor: '::',
+								_0: 0,
+								_1: {
+									ctor: '::',
+									_0: 0,
+									_1: {
+										ctor: '::',
+										_0: 4,
+										_1: {
+											ctor: '::',
+											_0: 0,
+											_1: {
+												ctor: '::',
+												_0: 0,
+												_1: {ctor: '[]'}
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			},
+			_1: {
+				ctor: '::',
+				_0: {
+					ctor: '::',
+					_0: 9,
+					_1: {
+						ctor: '::',
+						_0: 8,
+						_1: {
+							ctor: '::',
+							_0: 0,
+							_1: {
+								ctor: '::',
+								_0: 7,
+								_1: {
+									ctor: '::',
+									_0: 4,
+									_1: {
+										ctor: '::',
+										_0: 0,
+										_1: {
+											ctor: '::',
+											_0: 0,
+											_1: {
+												ctor: '::',
+												_0: 0,
+												_1: {
+													ctor: '::',
+													_0: 5,
+													_1: {ctor: '[]'}
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				},
+				_1: {
+					ctor: '::',
+					_0: {
+						ctor: '::',
+						_0: 1,
+						_1: {
+							ctor: '::',
+							_0: 0,
+							_1: {
+								ctor: '::',
+								_0: 0,
+								_1: {
+									ctor: '::',
+									_0: 0,
+									_1: {
+										ctor: '::',
+										_0: 7,
+										_1: {
+											ctor: '::',
+											_0: 0,
+											_1: {
+												ctor: '::',
+												_0: 9,
+												_1: {
+													ctor: '::',
+													_0: 0,
+													_1: {
+														ctor: '::',
+														_0: 0,
+														_1: {ctor: '[]'}
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					},
+					_1: {
+						ctor: '::',
+						_0: {
+							ctor: '::',
+							_0: 0,
+							_1: {
+								ctor: '::',
+								_0: 0,
+								_1: {
+									ctor: '::',
+									_0: 9,
+									_1: {
+										ctor: '::',
+										_0: 5,
+										_1: {
+											ctor: '::',
+											_0: 0,
+											_1: {
+												ctor: '::',
+												_0: 1,
+												_1: {
+													ctor: '::',
+													_0: 6,
+													_1: {
+														ctor: '::',
+														_0: 0,
+														_1: {
+															ctor: '::',
+															_0: 0,
+															_1: {ctor: '[]'}
+														}
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+						},
+						_1: {
+							ctor: '::',
+							_0: {
+								ctor: '::',
+								_0: 0,
+								_1: {
+									ctor: '::',
+									_0: 0,
+									_1: {
+										ctor: '::',
+										_0: 8,
+										_1: {
+											ctor: '::',
+											_0: 0,
+											_1: {
+												ctor: '::',
+												_0: 2,
+												_1: {
+													ctor: '::',
+													_0: 0,
+													_1: {
+														ctor: '::',
+														_0: 0,
+														_1: {
+															ctor: '::',
+															_0: 0,
+															_1: {
+																ctor: '::',
+																_0: 7,
+																_1: {ctor: '[]'}
+															}
+														}
+													}
+												}
+											}
+										}
+									}
+								}
+							},
+							_1: {
+								ctor: '::',
+								_0: {
+									ctor: '::',
+									_0: 6,
+									_1: {
+										ctor: '::',
+										_0: 0,
+										_1: {
+											ctor: '::',
+											_0: 0,
+											_1: {
+												ctor: '::',
+												_0: 0,
+												_1: {
+													ctor: '::',
+													_0: 1,
+													_1: {
+														ctor: '::',
+														_0: 8,
+														_1: {
+															ctor: '::',
+															_0: 0,
+															_1: {
+																ctor: '::',
+																_0: 9,
+																_1: {
+																	ctor: '::',
+																	_0: 3,
+																	_1: {ctor: '[]'}
+																}
+															}
+														}
+													}
+												}
+											}
+										}
+									}
+								},
+								_1: {
+									ctor: '::',
+									_0: {
+										ctor: '::',
+										_0: 0,
+										_1: {
+											ctor: '::',
+											_0: 0,
+											_1: {
+												ctor: '::',
+												_0: 1,
+												_1: {
+													ctor: '::',
+													_0: 0,
+													_1: {
+														ctor: '::',
+														_0: 0,
+														_1: {
+															ctor: '::',
+															_0: 0,
+															_1: {
+																ctor: '::',
+																_0: 0,
+																_1: {
+																	ctor: '::',
+																	_0: 0,
+																	_1: {
+																		ctor: '::',
+																		_0: 0,
+																		_1: {ctor: '[]'}
+																	}
+																}
+															}
+														}
+													}
+												}
+											}
+										}
+									},
+									_1: {
+										ctor: '::',
+										_0: {
+											ctor: '::',
+											_0: 0,
+											_1: {
+												ctor: '::',
+												_0: 0,
+												_1: {
+													ctor: '::',
+													_0: 4,
+													_1: {
+														ctor: '::',
+														_0: 2,
+														_1: {
+															ctor: '::',
+															_0: 0,
+															_1: {
+																ctor: '::',
+																_0: 0,
+																_1: {
+																	ctor: '::',
+																	_0: 5,
+																	_1: {
+																		ctor: '::',
+																		_0: 0,
+																		_1: {
+																			ctor: '::',
+																			_0: 0,
+																			_1: {ctor: '[]'}
+																		}
+																	}
+																}
+															}
+														}
+													}
+												}
+											}
+										},
+										_1: {ctor: '[]'}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+};
+var _user$project$Main$main = _elm_lang$html$Html$beginnerProgram(
+	{view: _user$project$Main$view, model: _user$project$Main$model, update: _user$project$Main$update})();
+var _user$project$Main$Model = function (a) {
+	return {board: a};
+};
+var _user$project$Main$None = {ctor: 'None'};

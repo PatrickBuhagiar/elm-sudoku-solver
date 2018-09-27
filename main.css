@@ -1,0 +1,70 @@
+body {
+    font-family: 'Roboto', sans-serif;
+  }
+  .container-board {
+    display: flex;
+    flex-direction: column;
+    height: 70vh;
+    justify-content: space-evenly;
+    min-height: 300px;
+  }
+  
+  .marker-board {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 70vh;
+  }
+  
+  .place-holder {
+    font-weight: 300;
+    height: 60px;
+    width: 60px;
+    border: solid 1px #abb0b5;
+    font-size: 30px;
+    text-align: center;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .information-board {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 5vh;
+  }
+  
+  .button-group {
+    display: flex;
+    justify-content: center;
+  }
+  .btn {
+    border: solid 1px;
+    margin-right: 5px;
+    border-radius: 5px;
+    height: 35px;
+    background-color: white;
+  }
+  
+  .row {
+    display: flex;
+  }
+  
+  .game-status {
+    color: #e67e22;
+  }
+  
+  .next-turn {
+    color: #2ecc71;
+  }
+  
+  h1 {
+    text-align: center;
+    font-weight: 100;
+  }
+
+  .grid-color {
+      background-color: #fff5e7;
+  }
